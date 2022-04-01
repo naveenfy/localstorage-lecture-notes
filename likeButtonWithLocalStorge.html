@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="zero">0</h1>
+    <button id="likeButton">
+        Like
+    </button>
+    <button id="unLikeButton">
+       UnLike
+    </button>
+</body>
+<script>
+
+    document.querySelector('#likeButton').addEventListener('click', likeFuntion);
+
+    document.querySelector('#unLikeButton').addEventListener('click', unLikeFunctin);
+    
+    var count;
+    if( localStorage.getItem('count') === null) {
+        count = 0;
+    } else {
+        count = localStorage.getItem('count');
+    }
+    document.querySelector('h1').innerText = count;
+    function likeFuntion() {
+        count++;
+        localStorage.setItem('count', count);
+        document.getElementById('zero').innerText = count;
+    }
+    function unLikeFunctin() {
+        count--;
+        localStorage.setItem('count', count);
+        document.getElementById('zero').innerText = count;
+    }
+
+</script>
+</html>
