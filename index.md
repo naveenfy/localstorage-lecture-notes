@@ -37,4 +37,6 @@ eg:
     - Any lang can understand Python, java, C++, C
     - JSON keys has quotations
     - JS objects has JS specific funtions
-    
+
+4. Showed how to push to git
+https://github.com/naveenraju9/localstorage-lecture-notes
